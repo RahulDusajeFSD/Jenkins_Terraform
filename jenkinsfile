@@ -46,7 +46,7 @@ pipeline{
                     equals expected: true, actual:params.autoApprove
                 }
             }
-        }
+        
 
             steps{
                 script{
@@ -55,6 +55,7 @@ pipeline{
                     parameters: [text(name: 'Plan', description: 'Please review the plan', defaultValue: plan)]
                 }
             }
+        }
 
             stage('Apply'){
                 steps{
